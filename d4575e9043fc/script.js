@@ -526,14 +526,14 @@
   const photoSubtitle = document.getElementById('photoSubtitle');
 
   const dianaPhotos = [
-    { src: 'assets/diana.jpg', vibe: 'Найкраща дівчина у світі ❤️' },
-    { src: 'assets/photo_2026-09-29_21-27-10.jpg', vibe: 'Твоя найщиріша усмішка ✨' },
-    { src: 'assets/photo_2026-09-29_21-27-18.jpg', vibe: 'Мій затишок і найтепліший погляд ☕' },
+    { src: 'assets/diana.jpg', vibe: 'Найкраща дівчинка у світі ❤️' },
+    { src: 'assets/photo_2026-09-29_21-27-10.jpg', vibe: 'Люблю твою найщирішу усмішку ✨' },
+    { src: 'assets/photo_2026-09-29_21-27-18.jpg', vibe: 'Ти - мій затишок☕' },
     { src: 'assets/photo_2026-09-29_21-27-22.jpg', vibe: 'Неймовірно красива Діанка 🌸' },
     { src: 'assets/photo_2026-09-29_21-27-26.jpg', vibe: 'Кожен погляд — у саме серце 💫' },
     { src: 'assets/photo_2026-09-29_21-27-30.jpg', vibe: 'Обожнюю тебе безмежно 💖' },
     { src: 'assets/photo_2026-09-29_21-27-33.jpg', vibe: 'Справжня і неповторна 🌿' },
-    { src: 'assets/photo_2026-09-29_21-27-36.jpg', vibe: 'Наша історія тільки починається ♾️' }
+    { src: 'assets/photo_2026-09-29_21-27-36.jpg', vibe: 'Хочу бути з тобою вічно ♾️' }
   ];
 
   dianaPhotos.forEach((item) => {
@@ -624,10 +624,10 @@
   ];
 
   const finalLoveAnswers = [
-    { emoji: '❤️', text: 'БЕЗМЕЖНО ЛЮБЛЮ! ❤️ (і завжди любитиму!)' },
+    { emoji: '❤️', text: 'БЕЗМЕЖНО ЛЮБЛЮ! ❤️ (і завжди любитиму)' },
     { emoji: '🥰', text: 'ШАЛЕНО ЛЮБЛЮ! ✨ Ти моє найбільше щастя!' },
-    { emoji: '💍', text: '1000% ЛЮБЛЮ! 💖 Інших варіантів у природі немає!' },
-    { emoji: '👑', text: 'ЛЮБЛЮ понад усе на світі! 🌸 Мій найкращий вибір!' }
+    { emoji: '💍', text: 'НЕЙМОВРНО ЛЮБЛЮ! 💖 А як інакше?' },
+    { emoji: '👑', text: 'ЛЮБЛЮ найбільше в світі! 🌸 Ти моє' }
   ];
 
   let isRandomizerSpinning = false;
@@ -679,9 +679,9 @@
             document.documentElement.classList.add('sad-grayscale');
             document.body.classList.add('sad-grayscale'); 
 
-            if (randomizerEmoji) randomizerEmoji.textContent = '🙃';
-            if (randomizerText) randomizerText.textContent = 'Не люблю... 🙃';
-            if (babakSayText) babakSayText.textContent = 'НЕ каже';
+            if (randomizerEmoji) randomizerEmoji.textContent = '😑';
+            if (randomizerText) randomizerText.textContent = 'Не люблю... 😑';
+            if (babakSayText) babakSayText.textContent = 'ніколи не скаже';
             romanticAudio.playChime(220); 
 
             setTimeout(() => {
@@ -741,7 +741,7 @@
                   if (randomizerText) {
                     randomizerText.classList.remove('text-knockout');
                     randomizerText.classList.add('text-love-reveal');
-                    randomizerText.textContent = 'БЕЗМЕЖНО ЛЮБЛЮ! ❤️';
+                    randomizerText.textContent = 'ДУЖЕ СИЛЬНО ЛЮБЛЮ! ❤️';
                     if (babakSayText) babakSayText.textContent = 'каже';
                     setTimeout(() => randomizerText.classList.remove('text-love-reveal'), 600);
                   }
@@ -892,8 +892,8 @@
       showToast(`🏆 Новий рекорд Діани: ${highScore} балів! Ти неймовірна!`);
     }
 
-    if (overlayTitle) overlayTitle.textContent = 'Ой, спіткнулися! Але це було чудово ❤️';
-    if (overlaySub) overlaySub.textContent = `Твій рахунок: ${score} балів! Дінозаврик хоче спробувати ще раз!`;
+    if (overlayTitle) overlayTitle.textContent = 'Ой, спіткнулося :< Але це було чудово ❤️';
+    if (overlaySub) overlaySub.textContent = `Твій рахунок: ${score} балів! Дінозаврик хоче спробувати ще раз?`;
     if (overlayEmoji) overlayEmoji.textContent = '🥰';
     if (startBtnText) startBtnText.textContent = 'Грати знову 🔄';
     if (gameOverOverlay) gameOverOverlay.classList.remove('hidden');
@@ -1016,7 +1016,7 @@
       } else if (score === 100 && gameMilestoneBadge) {
         gameMilestoneBadge.innerHTML = '<span>Діно поспішає на побачення! 🏃‍♂️❤️</span>';
       } else if (score === 200 && gameMilestoneBadge) {
-        gameMilestoneBadge.innerHTML = '<span>Влад пишається тобою! 🏆</span>';
+        gameMilestoneBadge.innerHTML = '<span>Бабак пишається тобою! 🏆</span>';
       } else if (score === 350 && gameMilestoneBadge) {
         gameMilestoneBadge.innerHTML = '<span>Справжній чемпіон кохання! 👑</span>';
       }
@@ -1232,7 +1232,7 @@
     foreverNoBtn.classList.add('poofed');
     romanticAudio.playChime(350);
     if (noFunnyToast) {
-      noFunnyToast.innerHTML = customToast || '🚀 Кнопка «Ні» не витримала тиску і катапультувалася в космос!';
+      noFunnyToast.innerHTML = customToast || '🚀 Кнопка «Ні» не витримала тиску і вскрила вєни!';
     }
     setTimeout(() => {
       foreverNoBtn.style.display = 'none';
@@ -1249,7 +1249,7 @@
         if (mobileTriggered) return;
         mobileTriggered = true;
         setTimeout(() => {
-          launchNoBtnToSpace('🚨 ПОМИЛКА 404: Відповідь «Ні» полетіла в космос! 🚀💨 Тільки ТАК!');
+          launchNoBtnToSpace('🚨 ПОМИЛКА: Відповідь «Ні» вскрила вєни! 🚀💨 Тільки ТАК!');
         }, 1300);
       }
 
@@ -1290,11 +1290,11 @@
           if (noAttempts === 1 && noFunnyToast) {
             noFunnyToast.textContent = 'Ей, куди це ти наводишся? 🏃‍♂️💨';
           } else if (noAttempts === 2 && noFunnyToast) {
-            noFunnyToast.textContent = 'Ага, не зловиш! Тільки спробуй ще раз! 😜';
+            noFunnyToast.textContent = 'Та щас, не зловиш! Тільки спробуй ще раз! 😜';
           }
         } else {
           
-          launchNoBtnToSpace('🚀 Кнопка «Ні» не витримала тиску і катапультувалася в космос!');
+          launchNoBtnToSpace('🚀 Кнопка «Ні» не витримала тиску і вскрила вєни!');
         }
       });
 
